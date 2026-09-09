@@ -1,251 +1,497 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Shirley</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<style type="text/tailwindcss">
-  @theme {
-    --color-wine: #3F1828;
-    --color-wine-deep: #F8DDE7;
-    --color-gold: #C58A64;
-    --color-gold-soft: #F2DFC0;
-    --color-rose: #D96E88;
-    --color-ivory: #FFFDFB;
-    --color-ink: #2C1820;
-    --font-fraunces: "Fraunces", serif;
-    --font-jost: "Jost", sans-serif;
-    --animate-rise-in: rise-in 1s ease forwards;
-    --animate-wiggle: wiggle 0.28s ease-in-out infinite alternate;
-    --animate-float-heart: float-heart 5s ease-in-out infinite;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Shirley</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-wine: #3f1828;
+        --color-wine-deep: #f8dde7;
+        --color-gold: #c58a64;
+        --color-gold-soft: #f2dfc0;
+        --color-rose: #d96e88;
+        --color-ivory: #fffdfb;
+        --color-ink: #2c1820;
+        --font-fraunces: "Fraunces", serif;
+        --font-jost: "Jost", sans-serif;
+        --animate-rise-in: rise-in 1s ease forwards;
+        --animate-wiggle: wiggle 0.28s ease-in-out infinite alternate;
+        --animate-float-heart: float-heart 5s ease-in-out infinite;
 
-    @keyframes rise-in {
-      from { opacity: 0; transform: translateY(14px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+        @keyframes rise-in {
+          from {
+            opacity: 0;
+            transform: translateY(14px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
 
-    @keyframes wiggle {
-      0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
-      25% { transform: translate3d(-2px, 0, 0) rotate(-2deg); }
-      75% { transform: translate3d(2px, 0, 0) rotate(2deg); }
-    }
+        @keyframes wiggle {
+          0%,
+          100% {
+            transform: translate3d(0, 0, 0) rotate(0deg);
+          }
+          25% {
+            transform: translate3d(-2px, 0, 0) rotate(-2deg);
+          }
+          75% {
+            transform: translate3d(2px, 0, 0) rotate(2deg);
+          }
+        }
 
-    @keyframes float-heart {
-      0% { opacity: 0; transform: translateY(20px) scale(0.8); }
-      20% { opacity: 1; }
-      100% { opacity: 0; transform: translateY(-120px) scale(1.2); }
-    }
-  }
-</style>
-</head>
-<body class="overflow-x-hidden bg-[radial-gradient(circle_at_top,_#fffaf8_0%,_#f5dfe6_25%,_#f4d7de_58%,_#f0cbd8_100%)] font-jost font-light text-wine">
-
-<section class="relative flex min-h-svh flex-col items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_50%_20%,rgba(197,138,100,0.18),transparent_52%)] bg-wine-deep px-6 py-8 text-center text-ivory">
-  <div class="z-10 text-[0.8rem] font-normal tracking-[0.04em] text-black opacity-0 animate-rise-in [animation-delay:200ms]">A LITTLE JOURNEY, FOR SHIRLEY</div>
-  <h1 class="z-10 mt-2 max-w-[14ch] font-fraunces text-[clamp(2.4rem,7vw,4.2rem)] font-normal italic leading-[1.15] opacity-0 animate-rise-in [animation-delay:500ms]">Before I ask you something —<br>let's remember how we got here.</h1>
-  <p class="z-10 mt-6 max-w-[32ch] text-[1.05rem] text-rose opacity-0 animate-rise-in [animation-delay:900ms]">Scroll down with me.</p>
-  <div class="z-10 mt-14 text-xs tracking-[0.08em] text-[#5b2f3d] opacity-0 animate-rise-in [animation-delay:1400ms]">↓ &nbsp; keep going</div>
-</section>
-
-<section class="mx-auto flex min-h-svh max-w-[1100px] items-center px-6 py-16 md:py-20">
-  <div class="grid w-full items-center gap-7 md:grid-cols-2 md:gap-16">
-    <div class="fade-el relative -z-0 translate-y-6 opacity-0 transition-all duration-[900ms] ease-out before:absolute before:-left-3.5 before:-top-3.5 before:-bottom-3.5 before:right-3.5 before:-z-10 before:rounded-[2px] before:border before:border-gold-soft before:opacity-60 max-md:before:hidden">
-      <img class="block w-full rounded-[2px] shadow-[0_30px_60px_-20px_rgba(43,20,32,0.35)]" src="WhatsApp Image 2026-09-09 at 20.44.00 (1).jpeg" alt="Shirley">
-    </div>
-    <div class="fade-el translate-y-6 opacity-0 transition-all duration-[900ms] ease-out">
-      <div class="text-[0.8rem] font-normal tracking-[0.04em] text-black">WHERE IT STARTED</div>
-      <h2 class="mt-2 font-fraunces text-[clamp(1.6rem,3.4vw,2.4rem)] font-normal italic leading-[1.15] text-wine">The first time I saw this face light up my screen.</h2>
-      <p class="mt-[1.1rem] max-w-[38ch] text-[1.02rem] leading-7 text-ink/80">I didn't know it yet, but that was the beginning of everything that came after. You had no idea what you were starting.</p>
-    </div>
-  </div>
-</section>
-
-<section class="mx-auto flex min-h-svh max-w-[1100px] items-center px-6 py-16 md:py-20">
-  <div class="grid w-full items-center gap-7 md:grid-cols-2 md:gap-16">
-    <div class="fade-el relative order-1 translate-y-6 opacity-0 transition-all duration-[900ms] ease-out before:absolute before:-left-3.5 before:-top-3.5 before:-bottom-3.5 before:right-3.5 before:-z-10 before:rounded-[2px] before:border before:border-gold-soft before:opacity-60 max-md:before:hidden md:order-2">
-      <img class="block w-full rounded-[2px] shadow-[0_30px_60px_-20px_rgba(43,20,32,0.35)]" src="WhatsApp Image 2026-09-09 at 20.53.33 (1).jpeg" alt="Chiwo">
-    </div>
-    <div class="fade-el order-2 translate-y-6 opacity-0 transition-all duration-[900ms] ease-out md:order-1">
-      <div class="text-[0.8rem] font-normal tracking-[0.04em] text-black">AND THEN, ME</div>
-      <h2 class="mt-2 font-fraunces text-[clamp(1.6rem,3.4vw,2.4rem)] font-normal italic leading-[1.15] text-wine">Nervous, a little dramatic, completely sure about you.</h2>
-      <p class="mt-[1.1rem] max-w-[38ch] text-[1.02rem] leading-7 text-ink/85">I still don't fully know how I got so lucky. I just know I kept showing up, and you kept letting me.</p>
-    </div>
-  </div>
-</section>
-
-<section class="mx-auto flex min-h-svh max-w-[1100px] items-center px-6 py-16 md:py-20">
-  <div class="grid w-full items-center gap-7 md:grid-cols-2 md:gap-16">
-    <div class="fade-el relative translate-y-6 opacity-0 transition-all duration-[900ms] ease-out before:absolute before:-left-3.5 before:-top-3.5 before:-bottom-3.5 before:right-3.5 before:-z-10 before:rounded-[2px] before:border before:border-gold-soft before:opacity-60 max-md:before:hidden">
-      <img class="block w-full rounded-[2px] shadow-[0_30px_60px_-20px_rgba(43,20,32,0.35)]" src="assets/together1_web.jpg" alt="Us laughing together">
-    </div>
-    <div class="fade-el translate-y-6 opacity-0 transition-all duration-[900ms] ease-out">
-      <div class="text-[0.8rem] font-normal tracking-[0.04em] text-black">SOMEWHERE IN THE MIDDLE</div>
-      <h2 class="mt-2 font-fraunces text-[clamp(1.6rem,3.4vw,2.4rem)] font-normal italic leading-[1.15] text-wine">The kind of laughing that leaves no room for doubt.</h2>
-      <p class="mt-[1.1rem] max-w-[38ch] text-[1.02rem] leading-7 text-ink/85">We've had a hundred moments like this one — silly, loud, completely ourselves. Every one of them is a reason.</p>
-    </div>
-  </div>
-</section>
-
-<section class="mx-auto flex min-h-svh max-w-[1100px] items-center px-6 py-16 md:py-20">
-  <div class="grid w-full items-center gap-7 md:grid-cols-2 md:gap-16">
-    <div class="fade-el relative order-1 translate-y-6 opacity-0 transition-all duration-[900ms] ease-out before:absolute before:-left-3.5 before:-top-3.5 before:-bottom-3.5 before:right-3.5 before:-z-10 before:rounded-[2px] before:border before:border-gold-soft before:opacity-60 max-md:before:hidden md:order-2">
-      <img class="block w-full rounded-[2px] object-top shadow-[0_30px_60px_-20px_rgba(43,20,32,0.35)]" src="assets/cheek_kiss_web.jpg" alt="Us together">
-    </div>
-    <div class="fade-el order-2 translate-y-6 opacity-0 transition-all duration-[900ms] ease-out md:order-1">
-      <div class="text-[0.8rem] font-normal tracking-[0.04em] text-black">STILL HERE</div>
-      <h2 class="mt-2 font-fraunces text-[clamp(1.6rem,3.4vw,2.4rem)] font-normal italic leading-[1.15] text-wine">Through everything, this — us — is the part that stayed easy.</h2>
-      <p class="mt-[1.1rem] max-w-[38ch] text-[1.02rem] leading-7 text-ink/85">Not perfect. Just steady, and worth it, in a way I don't want to spend a single day without.</p>
-    </div>
-  </div>
-</section>
-
-<section class="relative flex min-h-svh items-center justify-center overflow-hidden bg-wine-deep text-center">
-  <div class="absolute inset-0 bg-[url('assets/cheek_kiss_web.jpg')] bg-cover bg-[center_20%] opacity-35 saturate-[.85]"></div>
-  <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(248,221,231,0.96)_0%,rgba(248,221,231,0.82)_38%,rgba(245,199,212,0.9)_100%)]"></div>
-  <div class="relative z-10 flex flex-col items-center px-6 py-8">
-    <div class="text-[0.8rem] font-normal tracking-[0.04em] text-black">WHICH BRINGS ME HERE</div>
-    <h2 class="fade-el mt-3 max-w-[16ch] translate-y-6 font-fraunces text-[clamp(2rem,6vw,3.4rem)] font-normal italic leading-[1.15] text-ivory opacity-0 transition-all duration-[900ms] ease-out">There's one more thing<br>I've been meaning to ask you.</h2>
-    <p class="fade-el mt-5 max-w-[34ch] translate-y-6 text-base text-rose opacity-0 transition-all duration-[900ms] ease-out">Not a quiz. Not a test. Just something I mean with my whole chest.</p>
-    <button class="fade-el mt-12 translate-y-6 rounded-[2px] border border-[#7a3a4d] bg-[#7a3a4d] px-[2.6rem] py-[0.95rem] text-[0.95rem] tracking-[0.03em] text-[#fffaf8] opacity-0 transition-all duration-[900ms] ease-out hover:bg-[#5d2d3e] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-[#5b2f3d]" id="revealBtn">I'm ready</button>
-  </div>
-</section>
-
-<section class="hidden min-h-svh items-center justify-center bg-wine-deep px-6 py-8 text-center" id="questionStage">
-  <div>
-    <div class="text-[0.8rem] font-normal tracking-[0.04em] text-black">SHIRLEY</div>
-    <div class="mx-auto mt-[1.1rem] h-px w-[34px] bg-gold"></div>
-    <h2 class="mt-6 font-fraunces text-[clamp(2.1rem,7vw,3.8rem)] font-normal italic leading-[1.15] text-ivory">Will you marry me?</h2>
-    <div class="relative mt-12 flex min-h-[70px] justify-center gap-5">
-      <button class="rounded-[2px] border border-[#7a3a4d] bg-[#7a3a4d] px-10 py-[0.95rem] text-[0.95rem] tracking-[0.02em] text-[#fffaf8] transition duration-300 hover:scale-[1.04] hover:shadow-[0_10px_30px_-8px_rgba(122,58,77,0.6)]" id="yesBtn">Yes</button>
-      <button class="relative rounded-[2px] border border-[#9d4d5f] bg-[#fffaf8] px-10 py-[0.95rem] text-[0.95rem] tracking-[0.02em] text-[#4d2433] transition-transform duration-150" id="noBtn">Not yet</button>
-    </div>
-  </div>
-</section>
-
-<section class="hidden min-h-svh items-center justify-center bg-[radial-gradient(ellipse_at_50%_30%,rgba(201,151,77,0.22),transparent_60%)] bg-wine-deep px-6 py-8 text-center" id="yesStage">
-  <div class="relative w-full max-w-[760px]">
-    <div class="pointer-events-none absolute inset-0 overflow-hidden rounded-[28px]">
-      <span class="absolute left-[10%] top-[60%] animate-float-heart text-2xl">❤</span>
-      <span class="absolute left-[20%] top-[72%] animate-float-heart text-xl [animation-delay:800ms]">❤</span>
-      <span class="absolute left-[45%] top-[62%] animate-float-heart text-2xl [animation-delay:1300ms]">❤</span>
-      <span class="absolute right-[20%] top-[68%] animate-float-heart text-xl [animation-delay:2000ms]">❤</span>
-      <span class="absolute right-[12%] top-[72%] animate-float-heart text-2xl [animation-delay:2500ms]">❤</span>
-    </div>
-
-    <div class="rounded-[28px] border border-white/25 bg-[rgba(255,249,247,0.12)] p-6 shadow-[0_25px_80px_-25px_rgba(63,24,40,0.7)] backdrop-blur-sm md:p-10">
-      <div class="text-[0.8rem] font-normal tracking-[0.04em] text-black">SO IT'S YES</div>
-      <h2 class="mt-2 font-fraunces text-[clamp(2.2rem,7vw,4rem)] font-normal italic leading-[1.15] text-black-soft">Best answer I've ever gotten.</h2>
-      <div class="mx-auto mt-6 h-px w-[60px] bg-gold"></div>
-      <p class="mt-5 mx-auto max-w-[36ch] text-[1.05rem] leading-8 text-rose">I love you, Shirley. All the way through — today, and every ordinary day after this one.</p>
-      <p class="mt-4 mx-auto max-w-[42ch] text-base leading-7 text-ivory/80">I want the quiet mornings, the loud laughter, the peaceful nights, and every version of life we build together.</p>
-      <p class="mt-3 text-[0.72rem] uppercase tracking-[0.24em] text-black">Forever starts here • 11.09.2026</p>
-
-      <button class="mt-8 rounded-[2px] border border-[#7a3a4d] bg-[#7a3a4d] px-7 py-3 text-[0.9rem] tracking-[0.04em] text-[#fffaf8] transition duration-300 hover:-translate-y-0.5 hover:bg-[#5d2d3e] hover:text-white" id="secretBtn">Open our little note</button>
-
-      <div class="hidden mt-7 rounded-[20px] border border-gold/40 bg-[rgba(63,24,40,0.18)] px-5 py-5 text-left text-ivory md:px-7" id="hiddenNote">
-        <div class="text-[0.72rem] uppercase tracking-[0.2em] text-black">My promise</div>
-        <p class="mt-3 text-base leading-7 text-ivory/90 text-black-soft">Shirley, my favorite place in the whole world is wherever you are. I want to keep choosing you in the ordinary, in the chaos, in the joy, and in every future we dream up together. You are my softest place and my greatest adventure.</p>
+        @keyframes float-heart {
+          0% {
+            opacity: 0;
+            transform: translateY(20px) scale(0.8);
+          }
+          20% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+            transform: translateY(-120px) scale(1.2);
+          }
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="overflow-x-hidden bg-[radial-gradient(circle_at_top,_#fffaf8_0%,_#f5dfe6_25%,_#f4d7de_58%,_#f0cbd8_100%)] font-jost font-light text-wine"
+  >
+    <section
+      class="relative flex min-h-svh flex-col items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_50%_20%,rgba(197,138,100,0.18),transparent_52%)] bg-wine-deep px-6 py-8 text-center text-ivory"
+    >
+      <div
+        class="z-10 text-[0.8rem] font-normal tracking-[0.04em] text-black opacity-0 animate-rise-in [animation-delay:200ms]"
+      >
+        A LITTLE JOURNEY, FOR MY DEAREST SHIRLEY
       </div>
-    </div>
-  </div>
-</section>
+      <h1
+        class="z-10 mt-2 max-w-[14ch] font-fraunces text-[clamp(2.4rem,7vw,4.2rem)] font-normal italic leading-[1.15] opacity-0 animate-rise-in [animation-delay:500ms]"
+      >
+        Before I ask you something <br />let's remember how we got here.
+      </h1>
+      <p
+        class="z-10 mt-6 max-w-[32ch] text-[1.05rem] text-rose opacity-0 animate-rise-in [animation-delay:900ms]"
+      >
+        Scroll down with me.
+      </p>
+      <div
+        class="z-10 mt-14 text-xs tracking-[0.08em] text-[#5b2f3d] opacity-0 animate-rise-in [animation-delay:1400ms]"
+      >
+        ↓ &nbsp; keep going
+      </div>
+    </section>
 
-<footer class="bg-wine-deep px-6 py-10 text-center text-xs tracking-[0.03em] text-rose/40">made with all my heart, by chiwo</footer>
+    <section
+      class="mx-auto flex min-h-svh max-w-[1100px] items-center px-6 py-16 md:py-20"
+    >
+      <div class="grid w-full items-center gap-7 md:grid-cols-2 md:gap-16">
+        <div
+          class="fade-el relative -z-0 translate-y-6 opacity-0 transition-all duration-[900ms] ease-out before:absolute before:-left-3.5 before:-top-3.5 before:-bottom-3.5 before:right-3.5 before:-z-10 before:rounded-[2px] before:border before:border-gold-soft before:opacity-60 max-md:before:hidden"
+        >
+          <img
+            class="block w-full rounded-[2px] shadow-[0_30px_60px_-20px_rgba(43,20,32,0.35)]"
+            src="WhatsApp Image 2026-09-09 at 20.44.00 (1).jpeg"
+            alt="Shirley"
+          />
+        </div>
+        <div
+          class="fade-el translate-y-6 opacity-0 transition-all duration-[900ms] ease-out"
+        >
+          <div class="text-[0.8rem] font-normal tracking-[0.04em] text-black">
+            WHERE IT STARTED
+          </div>
+          <h2
+            class="mt-2 font-fraunces text-[clamp(1.6rem,3.4vw,2.4rem)] font-normal italic leading-[1.15] text-wine"
+          >
+            The first time I saw this face light up my screen.
+          </h2>
+          <p
+            class="mt-[1.1rem] max-w-[38ch] text-[1.02rem] leading-7 text-ink/80"
+          >
+            I didn't know it yet, but that was the beginning of everything that
+            came after. You had no idea what you were starting.
+          </p>
+        </div>
+      </div>
+    </section>
 
-<audio id="bgMusic" src="assets/Daniel-Caesar-Cool-(TrendySongz.com).mp3" preload="auto" loop playsinline></audio>
+    <section
+      class="mx-auto flex min-h-svh max-w-[1100px] items-center px-6 py-16 md:py-20"
+    >
+      <div class="grid w-full items-center gap-7 md:grid-cols-2 md:gap-16">
+        <div
+          class="fade-el relative order-1 translate-y-6 opacity-0 transition-all duration-[900ms] ease-out before:absolute before:-left-3.5 before:-top-3.5 before:-bottom-3.5 before:right-3.5 before:-z-10 before:rounded-[2px] before:border before:border-gold-soft before:opacity-60 max-md:before:hidden md:order-2"
+        >
+          <img
+            class="block w-full rounded-[2px] shadow-[0_30px_60px_-20px_rgba(43,20,32,0.35)]"
+            src="WhatsApp Image 2026-09-09 at 20.53.33 (1).jpeg"
+            alt="Chiwo"
+          />
+        </div>
+        <div
+          class="fade-el order-2 translate-y-6 opacity-0 transition-all duration-[900ms] ease-out md:order-1"
+        >
+          <div class="text-[0.8rem] font-normal tracking-[0.04em] text-black">
+            AND THEN, ME
+          </div>
+          <h2
+            class="mt-2 font-fraunces text-[clamp(1.6rem,3.4vw,2.4rem)] font-normal italic leading-[1.15] text-wine"
+          >
+            Nervous, a little dramatic, completely sure about you.
+          </h2>
+          <p
+            class="mt-[1.1rem] max-w-[38ch] text-[1.02rem] leading-7 text-ink/85"
+          >
+            I still don't fully know how I got so lucky. I just know I kept
+            showing up, and you kept letting me.
+          </p>
+        </div>
+      </div>
+    </section>
 
-<script>
-// scroll-triggered fade for chapters
-const fadeEls = document.querySelectorAll('.fade-el');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.remove('opacity-0', 'translate-y-6');
-      entry.target.classList.add('opacity-100', 'translate-y-0');
-    }
-  });
-}, { threshold: 0.2 });
-fadeEls.forEach(el => observer.observe(el));
+    <section
+      class="mx-auto flex min-h-svh max-w-[1100px] items-center px-6 py-16 md:py-20"
+    >
+      <div class="grid w-full items-center gap-7 md:grid-cols-2 md:gap-16">
+        <div
+          class="fade-el relative translate-y-6 opacity-0 transition-all duration-[900ms] ease-out before:absolute before:-left-3.5 before:-top-3.5 before:-bottom-3.5 before:right-3.5 before:-z-10 before:rounded-[2px] before:border before:border-gold-soft before:opacity-60 max-md:before:hidden"
+        >
+          <img
+            class="block w-full rounded-[2px] shadow-[0_30px_60px_-20px_rgba(43,20,32,0.35)]"
+            src="assets/together1_web.jpg"
+            alt="Us laughing together"
+          />
+        </div>
+        <div
+          class="fade-el translate-y-6 opacity-0 transition-all duration-[900ms] ease-out"
+        >
+          <div class="text-[0.8rem] font-normal tracking-[0.04em] text-black">
+            SOMEWHERE IN THE MIDDLE
+          </div>
+          <h2
+            class="mt-2 font-fraunces text-[clamp(1.6rem,3.4vw,2.4rem)] font-normal italic leading-[1.15] text-wine"
+          >
+            The kind of laughing that leaves no room for doubt.
+          </h2>
+          <p
+            class="mt-[1.1rem] max-w-[38ch] text-[1.02rem] leading-7 text-ink/85"
+          >
+            We've had a hundred moments like this one. Silly, loud, completely
+            ourselves. Every one of them is a reason.
+          </p>
+        </div>
+      </div>
+    </section>
 
-// reveal -> question stage
-const revealBtn = document.getElementById('revealBtn');
-const questionStage = document.getElementById('questionStage');
-revealBtn.addEventListener('click', () => {
-  questionStage.classList.remove('hidden');
-  questionStage.classList.add('flex');
-  questionStage.scrollIntoView({ behavior: 'smooth' });
-});
+    <section
+      class="mx-auto flex min-h-svh max-w-[1100px] items-center px-6 py-16 md:py-20"
+    >
+      <div class="grid w-full items-center gap-7 md:grid-cols-2 md:gap-16">
+        <div
+          class="fade-el relative order-1 translate-y-6 opacity-0 transition-all duration-[900ms] ease-out before:absolute before:-left-3.5 before:-top-3.5 before:-bottom-3.5 before:right-3.5 before:-z-10 before:rounded-[2px] before:border before:border-gold-soft before:opacity-60 max-md:before:hidden md:order-2"
+        >
+          <img
+            class="block w-full rounded-[2px] object-top shadow-[0_30px_60px_-20px_rgba(43,20,32,0.35)]"
+            src="assets/cheek_kiss_web.jpg"
+            alt="Us together"
+          />
+        </div>
+        <div
+          class="fade-el order-2 translate-y-6 opacity-0 transition-all duration-[900ms] ease-out md:order-1"
+        >
+          <div class="text-[0.8rem] font-normal tracking-[0.04em] text-black">
+            STILL HERE
+          </div>
+          <h2
+            class="mt-2 font-fraunces text-[clamp(1.6rem,3.4vw,2.4rem)] font-normal italic leading-[1.15] text-wine"
+          >
+            Through everything, this is the part that stayed easy.
+          </h2>
+          <p
+            class="mt-[1.1rem] max-w-[38ch] text-[1.02rem] leading-7 text-ink/85"
+          >
+            Not perfect. Just steady, and worth it, in a way I don't want to
+            spend a single day without.
+          </p>
+        </div>
+      </div>
+    </section>
 
-// playful "not yet" button that dodges
-const noBtn = document.getElementById('noBtn');
-const yesBtn = document.getElementById('yesBtn');
-const btnContainer = noBtn.parentElement;
-btnContainer.style.position = 'relative';
-btnContainer.style.overflow = 'visible';
+    <section
+      class="relative flex min-h-svh items-center justify-center overflow-hidden bg-wine-deep text-center"
+    >
+      <div
+        class="absolute inset-0 bg-[url('assets/cheek_kiss_web.jpg')] bg-cover bg-[center_20%] opacity-35 saturate-[.85]"
+      ></div>
+      <div
+        class="absolute inset-0 bg-[linear-gradient(180deg,rgba(248,221,231,0.96)_0%,rgba(248,221,231,0.82)_38%,rgba(245,199,212,0.9)_100%)]"
+      ></div>
+      <div class="relative z-10 flex flex-col items-center px-6 py-8">
+        <div class="text-[0.8rem] font-normal tracking-[0.04em] text-black">
+          WHICH BRINGS ME HERE
+        </div>
+        <h2
+          class="fade-el mt-3 max-w-[16ch] translate-y-6 font-fraunces text-[clamp(2rem,6vw,3.4rem)] font-normal italic leading-[1.15] text-ivory opacity-0 transition-all duration-[900ms] ease-out"
+        >
+          There's one more thing<br />I've been meaning to ask you.
+        </h2>
+        <p
+          class="fade-el mt-5 max-w-[34ch] translate-y-6 text-base text-rose opacity-0 transition-all duration-[900ms] ease-out"
+        >
+          Not a quiz. Not a test. Just something I mean with my whole chest.
+        </p>
+        <button
+          class="fade-el mt-12 translate-y-6 rounded-[2px] border border-[#7a3a4d] bg-[#7a3a4d] px-[2.6rem] py-[0.95rem] text-[0.95rem] tracking-[0.03em] text-[#fffaf8] opacity-0 transition-all duration-[900ms] ease-out hover:bg-[#5d2d3e] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-[#5b2f3d]"
+          id="revealBtn"
+        >
+          I'm ready
+        </button>
+      </div>
+    </section>
 
-function dodge(){
-  const containerRect = btnContainer.getBoundingClientRect();
-  const btnRect = noBtn.getBoundingClientRect();
-  const maxX = containerRect.width - btnRect.width;
-  const maxY = 40;
-  const randX = (Math.random() - 0.5) * Math.max(maxX, 160) * 1.6;
-  const randY = (Math.random() - 0.5) * maxY * 2;
-  noBtn.style.position = 'relative';
-  noBtn.style.left = randX + 'px';
-  noBtn.style.top = randY + 'px';
-}
+    <section
+      class="hidden min-h-svh items-center justify-center bg-wine-deep px-6 py-8 text-center"
+      id="questionStage"
+    >
+      <div>
+        <div class="text-[0.8rem] font-normal tracking-[0.04em] text-black">
+          SHIRLEY
+        </div>
+        <div class="mx-auto mt-[1.1rem] h-px w-[34px] bg-gold"></div>
+        <h2
+          class="mt-6 font-fraunces text-[clamp(2.1rem,7vw,3.8rem)] font-normal italic leading-[1.15] text-ivory"
+        >
+          Will you marry me?
+        </h2>
+        <div class="relative mt-12 flex min-h-[70px] justify-center gap-5">
+          <button
+            class="rounded-[2px] border border-[#7a3a4d] bg-[#7a3a4d] px-10 py-[0.95rem] text-[0.95rem] tracking-[0.02em] text-[#fffaf8] transition duration-300 hover:scale-[1.04] hover:shadow-[0_10px_30px_-8px_rgba(122,58,77,0.6)]"
+            id="yesBtn"
+          >
+            Yes
+          </button>
+          <button
+            class="relative rounded-[2px] border border-[#9d4d5f] bg-[#fffaf8] px-10 py-[0.95rem] text-[0.95rem] tracking-[0.02em] text-[#4d2433] transition-transform duration-150"
+            id="noBtn"
+          >
+            Not yet
+          </button>
+        </div>
+      </div>
+    </section>
 
-noBtn.addEventListener('mouseenter', dodge);
-noBtn.addEventListener('touchstart', (e) => { e.preventDefault(); dodge(); }, { passive:false });
-noBtn.addEventListener('click', (e) => { e.preventDefault(); dodge(); });
+    <section
+      class="hidden min-h-svh items-center justify-center bg-[radial-gradient(ellipse_at_50%_30%,rgba(201,151,77,0.22),transparent_60%)] bg-wine-deep px-6 py-8 text-center"
+      id="yesStage"
+    >
+      <div class="relative w-full max-w-[760px]">
+        <div
+          class="pointer-events-none absolute inset-0 overflow-hidden rounded-[28px]"
+        >
+          <span
+            class="absolute left-[10%] top-[60%] animate-float-heart text-2xl"
+            >❤</span
+          >
+          <span
+            class="absolute left-[20%] top-[72%] animate-float-heart text-xl [animation-delay:800ms]"
+            >❤</span
+          >
+          <span
+            class="absolute left-[45%] top-[62%] animate-float-heart text-2xl [animation-delay:1300ms]"
+            >❤</span
+          >
+          <span
+            class="absolute right-[20%] top-[68%] animate-float-heart text-xl [animation-delay:2000ms]"
+            >❤</span
+          >
+          <span
+            class="absolute right-[12%] top-[72%] animate-float-heart text-2xl [animation-delay:2500ms]"
+            >❤</span
+          >
+        </div>
 
-// yes -> final stage
-const yesStage = document.getElementById('yesStage');
-const secretBtn = document.getElementById('secretBtn');
-const hiddenNote = document.getElementById('hiddenNote');
+        <div
+          class="rounded-[28px] border border-white/25 bg-[rgba(255,249,247,0.12)] p-6 shadow-[0_25px_80px_-25px_rgba(63,24,40,0.7)] backdrop-blur-sm md:p-10"
+        >
+          <div class="text-[0.8rem] font-normal tracking-[0.04em] text-black">
+            SO IT'S YES
+          </div>
+          <h2
+            class="mt-2 font-fraunces text-[clamp(2.2rem,7vw,4rem)] font-normal italic leading-[1.15] text-black-soft"
+          >
+            Best answer I've ever gotten.
+          </h2>
+          <div class="mx-auto mt-6 h-px w-[60px] bg-gold"></div>
+          <p
+            class="mt-5 mx-auto max-w-[36ch] text-[1.05rem] leading-8 text-rose"
+          >
+            I love you, Shirley. All the way through today, and every ordinary
+            day after this one.
+          </p>
+          <p
+            class="mt-4 mx-auto max-w-[42ch] text-base leading-7 text-ivory/80"
+          >
+            I want the quiet mornings, the loud laughter, the peaceful nights,
+            and every version of life we build together.
+          </p>
+          <p class="mt-3 text-[0.72rem] uppercase tracking-[0.24em] text-black">
+            Forever starts here • 11.09.2026
+          </p>
 
-const bgMusic = document.getElementById('bgMusic');
-const shouldResumeMusic = new URLSearchParams(window.location.search).get('music') === '1' || localStorage.getItem('shirleyMusicPlaying') === '1';
+          <button
+            class="mt-8 rounded-[2px] border border-[#7a3a4d] bg-[#7a3a4d] px-7 py-3 text-[0.9rem] tracking-[0.04em] text-[#fffaf8] transition duration-300 hover:-translate-y-0.5 hover:bg-[#5d2d3e] hover:text-white"
+            id="secretBtn"
+          >
+            Open our little note
+          </button>
 
-const startMusic = () => {
-  if (!bgMusic || window.__proposalMusicStarted) return;
+          <div
+            class="hidden mt-7 rounded-[20px] border border-gold/40 bg-[rgba(63,24,40,0.18)] px-5 py-5 text-left text-ivory md:px-7"
+            id="hiddenNote"
+          >
+            <div class="text-[0.72rem] uppercase tracking-[0.2em] text-black">
+              My promise
+            </div>
+            <p class="mt-3 text-base leading-7 text-ivory/90 text-black-soft">
+              Shirley, my favorite place in the whole world is wherever you are.
+              I want to keep choosing you in the ordinary, in the chaos, in the
+              joy, and in every future we dream up together. You are my softest
+              place and my greatest adventure.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  bgMusic.volume = 0.9;
-  bgMusic.currentTime = 0;
-  bgMusic.play().catch(() => {});
-  window.__proposalMusicStarted = true;
-  localStorage.setItem('shirleyMusicPlaying', '1');
-};
+    <footer
+      class="bg-wine-deep px-6 py-10 text-center text-xs tracking-[0.03em] text-rose/40"
+    >
+      made with all my heart, by chiwo
+    </footer>
 
-if (shouldResumeMusic) {
-  startMusic();
-}
+    <audio
+      id="bgMusic"
+      src="assets/Daniel-Caesar-Cool-(TrendySongz.com).mp3"
+      preload="auto"
+      loop
+      playsinline
+    ></audio>
 
-revealBtn.addEventListener('click', () => {
-  startMusic();
-  questionStage.classList.remove('hidden');
-  questionStage.classList.add('flex');
-  questionStage.scrollIntoView({ behavior: 'smooth' });
-});
+    <script>
+      // scroll-triggered fade for chapters
+      const fadeEls = document.querySelectorAll(".fade-el");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.remove("opacity-0", "translate-y-6");
+              entry.target.classList.add("opacity-100", "translate-y-0");
+            }
+          });
+        },
+        { threshold: 0.2 },
+      );
+      fadeEls.forEach((el) => observer.observe(el));
 
-yesBtn.addEventListener('click', () => {
-  startMusic();
-  questionStage.classList.remove('flex');
-  questionStage.classList.add('hidden');
-  yesStage.classList.remove('hidden');
-  yesStage.classList.add('flex', 'animate-rise-in');
-  yesStage.scrollIntoView({ behavior: 'smooth' });
-});
+      // reveal -> question stage
+      const revealBtn = document.getElementById("revealBtn");
+      const questionStage = document.getElementById("questionStage");
+      revealBtn.addEventListener("click", () => {
+        questionStage.classList.remove("hidden");
+        questionStage.classList.add("flex");
+        questionStage.scrollIntoView({ behavior: "smooth" });
+      });
 
-secretBtn.addEventListener('click', () => {
-  hiddenNote.classList.toggle('hidden');
-  hiddenNote.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-});
-</script>
+      // playful "not yet" button that dodges
+      const noBtn = document.getElementById("noBtn");
+      const yesBtn = document.getElementById("yesBtn");
+      const btnContainer = noBtn.parentElement;
+      btnContainer.style.position = "relative";
+      btnContainer.style.overflow = "visible";
 
-</body>
+      function dodge() {
+        const containerRect = btnContainer.getBoundingClientRect();
+        const btnRect = noBtn.getBoundingClientRect();
+        const maxX = containerRect.width - btnRect.width;
+        const maxY = 40;
+        const randX = (Math.random() - 0.5) * Math.max(maxX, 160) * 1.6;
+        const randY = (Math.random() - 0.5) * maxY * 2;
+        noBtn.style.position = "relative";
+        noBtn.style.left = randX + "px";
+        noBtn.style.top = randY + "px";
+      }
+
+      noBtn.addEventListener("mouseenter", dodge);
+      noBtn.addEventListener(
+        "touchstart",
+        (e) => {
+          e.preventDefault();
+          dodge();
+        },
+        { passive: false },
+      );
+      noBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        dodge();
+      });
+
+      // yes -> final stage
+      const yesStage = document.getElementById("yesStage");
+      const secretBtn = document.getElementById("secretBtn");
+      const hiddenNote = document.getElementById("hiddenNote");
+
+      const bgMusic = document.getElementById("bgMusic");
+      const shouldResumeMusic =
+        new URLSearchParams(window.location.search).get("music") === "1" ||
+        localStorage.getItem("shirleyMusicPlaying") === "1";
+
+      const startMusic = () => {
+        if (!bgMusic || window.__proposalMusicStarted) return;
+
+        bgMusic.volume = 0.9;
+        bgMusic.currentTime = 0;
+        bgMusic.play().catch(() => {});
+        window.__proposalMusicStarted = true;
+        localStorage.setItem("shirleyMusicPlaying", "1");
+      };
+
+      if (shouldResumeMusic) {
+        startMusic();
+      }
+
+      revealBtn.addEventListener("click", () => {
+        startMusic();
+        questionStage.classList.remove("hidden");
+        questionStage.classList.add("flex");
+        questionStage.scrollIntoView({ behavior: "smooth" });
+      });
+
+      yesBtn.addEventListener("click", () => {
+        startMusic();
+        questionStage.classList.remove("flex");
+        questionStage.classList.add("hidden");
+        yesStage.classList.remove("hidden");
+        yesStage.classList.add("flex", "animate-rise-in");
+        yesStage.scrollIntoView({ behavior: "smooth" });
+      });
+
+      secretBtn.addEventListener("click", () => {
+        hiddenNote.classList.toggle("hidden");
+        hiddenNote.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+    </script>
+  </body>
 </html>
