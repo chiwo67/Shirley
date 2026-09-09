@@ -142,7 +142,7 @@
       <div class="mx-auto mt-6 h-px w-[60px] bg-gold"></div>
       <p class="mt-5 mx-auto max-w-[36ch] text-[1.05rem] leading-8 text-rose">I love you, Shirley. All the way through — today, and every ordinary day after this one.</p>
       <p class="mt-4 mx-auto max-w-[42ch] text-base leading-7 text-ivory/80">I want the quiet mornings, the loud laughter, the peaceful nights, and every version of life we build together.</p>
-      <p class="mt-3 text-[0.72rem] uppercase tracking-[0.24em] text-black">Forever starts here • 02.09.2026</p>
+      <p class="mt-3 text-[0.72rem] uppercase tracking-[0.24em] text-black">Forever starts here • 11.09.2026</p>
 
       <button class="mt-8 rounded-[2px] border border-[#7a3a4d] bg-[#7a3a4d] px-7 py-3 text-[0.9rem] tracking-[0.04em] text-[#fffaf8] transition duration-300 hover:-translate-y-0.5 hover:bg-[#5d2d3e] hover:text-white" id="secretBtn">Open our little note</button>
 
@@ -187,41 +187,19 @@ const btnContainer = noBtn.parentElement;
 btnContainer.style.position = 'relative';
 btnContainer.style.overflow = 'visible';
 
-function dodge(event){
+function dodge(){
   const containerRect = btnContainer.getBoundingClientRect();
   const btnRect = noBtn.getBoundingClientRect();
-  const pointerX = event ? event.clientX : containerRect.left + containerRect.width / 2;
-  const pointerY = event ? event.clientY : containerRect.top + containerRect.height / 2;
-
-  const moveRight = pointerX > btnRect.left + btnRect.width / 2;
-  const moveDown = pointerY > btnRect.top + btnRect.height / 2;
-
-  const maxX = Math.max(120, containerRect.width * 0.46);
-  const maxY = Math.max(50, containerRect.height * 0.7);
-
-  const randX = (moveRight ? -1 : 1) * (Math.random() * maxX + 60);
-  const randY = (moveDown ? -1 : 1) * (Math.random() * maxY + 20);
-
+  const maxX = containerRect.width - btnRect.width;
+  const maxY = 40;
+  const randX = (Math.random() - 0.5) * Math.max(maxX, 160) * 1.6;
+  const randY = (Math.random() - 0.5) * maxY * 2;
   noBtn.style.position = 'relative';
-  noBtn.style.transition = 'transform 0.18s ease, box-shadow 0.2s ease';
-  noBtn.style.transform = `translate(${randX}px, ${randY}px)`;
-  noBtn.classList.remove('animate-wiggle');
-  void noBtn.offsetWidth;
-  noBtn.classList.add('animate-wiggle');
+  noBtn.style.left = randX + 'px';
+  noBtn.style.top = randY + 'px';
 }
 
-btnContainer.addEventListener('pointermove', (event) => {
-  const rect = noBtn.getBoundingClientRect();
-  const dx = event.clientX - (rect.left + rect.width / 2);
-  const dy = event.clientY - (rect.top + rect.height / 2);
-  const distance = Math.hypot(dx, dy);
-
-  if (distance < 120) {
-    dodge(event);
-  }
-});
-
-noBtn.addEventListener('pointerenter', dodge);
+noBtn.addEventListener('mouseenter', dodge);
 noBtn.addEventListener('touchstart', (e) => { e.preventDefault(); dodge(); }, { passive:false });
 noBtn.addEventListener('click', (e) => { e.preventDefault(); dodge(); });
 
